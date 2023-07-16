@@ -1,2 +1,66 @@
+@import url(the-new-css-reset/css/reset.css);
 .App {
-  background-color: black; }
+  background-color: #2a3654; }
+
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
+  src: local("Roboto-regular"), url("../../assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Roboto-light";
+  src: url("../../assets/fonts/Roboto/Roboto-Light.ttf");
+  src: local("Roboto-light"), url("../../assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Roboto-medium";
+  src: url("../../assets/fonts/Roboto/Roboto-Medium.ttf");
+  src: local("Roboto-medium"), url("../../assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "League-Spartan-light";
+  src: url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Light.ttf");
+  src: local("League-Spartan-light"), url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "League-Spartan-regular";
+  src: url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Regular.ttf");
+  src: local("League-Spartan-regular"), url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "League-Spartan-medium";
+  src: url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Medium.ttf");
+  src: local("League-Spartan-medium"), url("../../assets/fonts/League_Spartan/static/LeagueSpartan-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-semibold";
+  src: url("../../assets/fonts/Raleway/static/Raleway-SemiBold.ttf");
+  src: local("Raleway-semibold"), url("../../assets/fonts/Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Inter-regular";
+  src: url("../../assets/fonts/Inter/static/Inter-Regular.ttf");
+  src: local("Inter-regular"), url("../../assets/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Inter-medium";
+  src: url("../../assets/fonts/Inter/static/Inter-Medium.ttf");
+  src: local("Inter-medium"), url("../../assets/fonts/Inter/static/Inter-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
