@@ -1,21 +1,14 @@
 import React from "react";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p className="Test">
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu></Menu>
+      <Home></Home>
+      <Skills></Skills>
     </div>
   );
 }

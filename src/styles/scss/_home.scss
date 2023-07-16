@@ -1,0 +1,65 @@
+@import "variables";
+
+.Home-wrapper {
+  height: $desktop-max-height;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow: hidden;
+
+  & .Home {
+    width: $desktop-max-width;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 3rem 5rem 0;
+
+    & .Img-bg {
+      position: absolute;
+      width: 52.1rem;
+      height: 100rem;
+      background-color: #2a3654;
+      border-bottom-left-radius: 1000px;
+      border-bottom-right-radius: 1000px;
+      z-index: -1;
+      top: -21.2rem;
+      left: -23rem;
+      transform: rotate(-54deg);
+    }
+
+    & img {
+      margin-left: -7rem;
+    }
+
+    & .Intro {
+      color: $dark-blue;
+      text-align: end;
+      & .Experiences {
+        line-height: 125%;
+        font-family: Roboto-light, sans-serif;
+        font-size: 10rem;
+      }
+      & .About {
+        border-top: 3px solid $dark-orange-var-1;
+        & .Name {
+          line-height: 140%;
+          font-family: League-Spartan-light, sans-serif;
+          font-size: 6.5rem;
+
+          & span {
+            font-family: League-Spartan-regular, sans-serif;
+          }
+        }
+
+        & .Content {
+          line-height: 140%;
+          font-family: Raleway-semibold, sans-serif;
+          font-size: 2.8rem;
+          color: $dark-orange-var-1;
+        }
+      }
+    }
+  }
+}

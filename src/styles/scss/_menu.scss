@@ -1,0 +1,42 @@
+@import "variables";
+
+.Menu-wrapper {
+  padding: 2.2rem 0;
+  font-family: Roboto-regular, sans-serif;
+  font-size: 1.7rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 1;
+  & .Menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    & .Menu-item {
+      padding: 0.5rem 2rem;
+      border-radius: 50px;
+      transition: background-color 0.5s ease-out;
+      &.Active {
+        background-color: $dark-blue;
+        color: white;
+      }
+
+      &:hover:not(.Active) {
+        background-color: $dark-blue-op50;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    & .Small-circle {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: $dark-blue;
+      border-radius: 500px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "variables";
+
+.Skills-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: $dark-blue;
+  & .Skills {
+    width: $desktop-max-width;
+    height: 100%;
+  }
+}
