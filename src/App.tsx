@@ -1,14 +1,16 @@
 import React from "react";
 import Home from "./components/Home";
 import Menu from "./components/Menu";
-import Skills from "./components/Skills";
+import SkillsCompanies from "./components/Skills-Companies";
+import Works from "./components/Works";
 
 function App() {
   return (
     <div className="App">
       <Menu></Menu>
       <Home></Home>
-      <Skills></Skills>
+      <SkillsCompanies></SkillsCompanies>
+      <Works></Works>
     </div>
   );
 }

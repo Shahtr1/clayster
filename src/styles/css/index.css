@@ -4,7 +4,14 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .Home-wrapper .Triangle {
+    position: absolute;
+    transform: rotate(180deg);
+    z-index: 9;
+    right: 0;
+    top: -40rem; }
   .Home-wrapper .Home {
     width: 128rem;
     height: 100%;
@@ -57,7 +64,7 @@
   display: flex;
   justify-content: center;
   top: 0;
-  z-index: 1; }
+  z-index: 999999; }
   .Menu-wrapper .Menu {
     display: flex;
     gap: 2rem;
@@ -80,13 +87,149 @@
       background-color: #2a3654;
       border-radius: 500px; }
 
-.Skills-wrapper {
+.Skills-Companies-wrapper {
   display: flex;
-  justify-content: center;
-  background-color: #2a3654; }
-  .Skills-wrapper .Skills {
-    width: 128rem;
-    height: 100%; }
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; }
+  .Skills-Companies-wrapper .Triangle {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%); }
+  .Skills-Companies-wrapper .Skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .Skills-Companies-wrapper .Skills .Title-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      font-size: 2rem; }
+      .Skills-Companies-wrapper .Skills .Title-wrapper .Title {
+        background-color: #2a3654;
+        padding: 5px 3rem;
+        color: white;
+        font-family: Roboto-medium, sans-serif;
+        font-size: 2rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem; }
+      .Skills-Companies-wrapper .Skills .Title-wrapper .Download-cv {
+        position: absolute;
+        right: 0;
+        padding: 0 3rem;
+        border-top-left-radius: 1.5rem;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #e58642 0%, #75380b 100%);
+        font-family: Roboto-regular, sans-serif;
+        color: white; }
+        .Skills-Companies-wrapper .Skills .Title-wrapper .Download-cv .Download {
+          scale: 0.8; }
+    .Skills-Companies-wrapper .Skills .Content-wrapper {
+      width: 100%;
+      background-color: #2a3654;
+      display: flex;
+      justify-content: center;
+      height: inherit; }
+      .Skills-Companies-wrapper .Skills .Content-wrapper .Content {
+        height: inherit;
+        font-size: 2rem;
+        color: white;
+        font-family: Inter-regular, sans-serif;
+        text-align: center;
+        width: 70%;
+        padding: 4rem 0; }
+        .Skills-Companies-wrapper .Skills .Content-wrapper .Content span {
+          line-height: 140%; }
+        .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 2rem; }
+        .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons {
+          width: 90%;
+          display: grid;
+          grid-template-columns: repeat(8, 1fr); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons img {
+            scale: 0.7; }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Javascript {
+            grid-column-start: 1;
+            grid-column-end: 3; }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .React-icon {
+            grid-column-start: 3;
+            grid-column-end: 5; }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Angular {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 5;
+            transform: rotate(-14deg); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Laravel {
+            grid-column-start: 7;
+            transform: rotate(22deg); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Jquery {
+            grid-column-start: 8;
+            grid-column-end: 9; }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Tryhackme {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            transform: rotate(20deg); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Java {
+            grid-column-start: 4;
+            grid-column-end: 6;
+            transform: rotate(14deg); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Figma {
+            grid-column-start: 6;
+            grid-column-end: 7; }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Node-js {
+            grid-column-start: 7;
+            transform: rotate(6deg); }
+          .Skills-Companies-wrapper .Skills .Content-wrapper .Content .Skills-icons .Vue {
+            grid-column-start: 8;
+            transform: rotate(4deg); }
+  .Skills-Companies-wrapper .Companies {
+    padding-top: 1rem;
+    font-family: Roboto-medium, sans-serif;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .Skills-Companies-wrapper .Companies span {
+      color: #2a3654; }
+    .Skills-Companies-wrapper .Companies .Content {
+      display: flex;
+      height: 10rem;
+      gap: 10rem;
+      align-items: center;
+      margin-bottom: 1rem; }
+      .Skills-Companies-wrapper .Companies .Content .Art-image {
+        width: 11rem;
+        height: 7rem;
+        background-image: url("/src/assets/icons/companies/Art.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
+      .Skills-Companies-wrapper .Companies .Content .Pragtex-image {
+        width: 7.1rem;
+        height: 9rem;
+        background-image: url("/src/assets/icons/companies/pragtex.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
+      .Skills-Companies-wrapper .Companies .Content .Cyberspark-image {
+        width: 15rem;
+        height: 6rem;
+        background-image: url("/src/assets/icons/companies/cyber-spark.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
+      .Skills-Companies-wrapper .Companies .Content .Ascent-image {
+        width: 15rem;
+        height: 6rem;
+        background-image: url("/src/assets/icons/companies/ascent.png");
+        background-repeat: no-repeat;
+        background-size: contain; }
+  .Skills-Companies-wrapper .Empty {
+    height: 4rem;
+    background-color: #2a3654; }
 
 @font-face {
   font-family: "Roboto-regular";

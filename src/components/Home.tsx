@@ -1,9 +1,12 @@
 import React from "react";
 import shahrukh from "../assets/images/desktop/Shahrukh.png";
+import triangle from "../assets/images/desktop/light-blue-triangle.png";
 
 function Home() {
   return (
     <div className="Home-wrapper">
+      <img src={triangle} className="Triangle" alt="triangle" />
+
       <div className="Home">
         <div className="Img-bg"></div>
         <img src={shahrukh} className="Shahrukh" alt="pic" />
