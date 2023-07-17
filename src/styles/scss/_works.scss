@@ -1,1 +1,41 @@
 @import "variables";
+
+.Works-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin-top: -3.4rem;
+
+  & .Works {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .Title {
+      font-size: 2rem;
+      background-color: white;
+      padding: 5px 3rem;
+      color: $dark-blue;
+      font-family: Inter-regular, sans-serif;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    & .Content-wrapper {
+      display: flex;
+      justify-content: center;
+      height: inherit;
+
+      & .Content {
+        height: inherit;
+        width: $desktop-max-width;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+        padding: 4rem 0;
+      }
+    }
+  }
+}

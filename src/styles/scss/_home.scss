@@ -9,10 +9,10 @@
   position: relative;
   & .Triangle {
     position: absolute;
-    transform: rotate(180deg);
+    transform: rotate(175deg);
     z-index: 9;
-    right: 0;
-    top: -40rem;
+    right: -10rem;
+    top: -51rem;
   }
 
   & .Home {

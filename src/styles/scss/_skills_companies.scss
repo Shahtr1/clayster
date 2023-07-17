@@ -30,7 +30,6 @@
         padding: 5px 3rem;
         color: white;
         font-family: Inter-regular, sans-serif;
-        font-size: 2rem;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
       }
@@ -232,7 +231,7 @@
   }
 
   & .Empty {
-    height: 4rem;
+    height: 8rem;
     background-color: $dark-blue;
   }
 }

@@ -8,10 +8,10 @@
   position: relative; }
   .Home-wrapper .Triangle {
     position: absolute;
-    transform: rotate(180deg);
+    transform: rotate(175deg);
     z-index: 9;
-    right: 0;
-    top: -40rem; }
+    right: -10rem;
+    top: -51rem; }
   .Home-wrapper .Home {
     width: 128rem;
     height: 100%;
@@ -66,7 +66,8 @@
   top: 0;
   z-index: 999999; }
   .Menu-wrapper .Menu {
-    background-color: white;
+    box-shadow: 0 0 5px 0 #2a3654;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 1.5rem;
     border-radius: 500px;
     display: flex;
@@ -116,7 +117,6 @@
         padding: 5px 3rem;
         color: white;
         font-family: Inter-regular, sans-serif;
-        font-size: 2rem;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem; }
       .Skills-Companies-wrapper .Skills .Title-wrapper .Download-cv {
@@ -242,8 +242,97 @@
       .Skills-Companies-wrapper .Companies .Content .Ascent-image {
         background-image: url("/src/assets/icons/companies/ascent.png"); }
   .Skills-Companies-wrapper .Empty {
-    height: 4rem;
+    height: 8rem;
     background-color: #2a3654; }
+
+.Works-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  margin-top: -3.4rem; }
+  .Works-wrapper .Works {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .Works-wrapper .Works .Title {
+      font-size: 2rem;
+      background-color: white;
+      padding: 5px 3rem;
+      color: #2a3654;
+      font-family: Inter-regular, sans-serif;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem; }
+    .Works-wrapper .Works .Content-wrapper {
+      display: flex;
+      justify-content: center;
+      height: inherit; }
+      .Works-wrapper .Works .Content-wrapper .Content {
+        height: inherit;
+        width: 128rem;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+        padding: 4rem 0; }
+
+.Work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; }
+  .Work-item .Heading {
+    font-family: Inter-regular, sans-serif;
+    width: 90%;
+    text-align: center;
+    background-color: #2a3654;
+    border-radius: 1.5rem;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0; }
+  .Work-item .Work-item-Content-wrapper {
+    display: flex;
+    width: 100%; }
+    .Work-item .Work-item-Content-wrapper .Work-item-Cover {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 45rem; }
+    .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info {
+        box-shadow: 0 0 35px 0 #2a3654;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 70%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(180deg, #2a3654 1.02%, #586c9c 100%);
+        font-family: Inter-regular, sans-serif;
+        font-size: 1.7rem;
+        color: white;
+        text-align: center; }
+        .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Company-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          border-radius: 1.5rem; }
+          .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Company-icon-wrapper img {
+            scale: 0.8; }
+        .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-link {
+          text-decoration: underline;
+          cursor: pointer; }
+        .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-skill {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-skill img {
+            scale: 0.7; }
 
 .Socials {
   position: fixed;

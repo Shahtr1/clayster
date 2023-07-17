@@ -1,0 +1,74 @@
+@import "variables";
+
+.Work-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  & .Heading {
+    font-family: Inter-regular, sans-serif;
+    width: 90%;
+    text-align: center;
+    background-color: $dark-blue;
+    border-radius: $border-radius;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  & .Work-item-Content-wrapper {
+    display: flex;
+    width: 100%;
+    & .Work-item-Cover {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 45rem;
+    }
+
+    & .Work-item-info-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .Work-item-info {
+        box-shadow: 0 0 35px 0 $dark-blue;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 70%;
+        padding: 2rem;
+        border-radius: $border-radius;
+        background: $blue-gradient;
+        font-family: Inter-regular, sans-serif;
+        font-size: 1.7rem;
+        color: white;
+        text-align: center;
+        & .Company-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          border-radius: $border-radius;
+          & img {
+            scale: 0.8;
+          }
+        }
+
+        & .Work-item-link {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        & .Work-item-skill {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          & img {
+            scale: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

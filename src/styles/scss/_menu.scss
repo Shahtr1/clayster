@@ -11,8 +11,10 @@
   justify-content: center;
   top: 0;
   z-index: 999999;
+
   & .Menu {
-    background-color: white;
+    box-shadow: 0 0 5px 0 $dark-blue;
+    background-color: $white-op80;
     padding: 1.5rem;
     border-radius: 500px;
     display: flex;
