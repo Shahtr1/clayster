@@ -1,0 +1,23 @@
+@import "variables";
+
+.Socials {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99999;
+  background-color: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  gap: 1rem;
+  padding: 1rem 0;
+  box-shadow: $box-shadow;
+
+  & > img {
+    scale: 0.7;
+    cursor: pointer;
+  }
+}

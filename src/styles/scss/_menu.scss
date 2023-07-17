@@ -4,7 +4,7 @@
   padding: 2.2rem 0;
   font-family: Roboto-regular, sans-serif;
   font-size: 1.7rem;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   display: flex;
@@ -12,6 +12,9 @@
   top: 0;
   z-index: 999999;
   & .Menu {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 500px;
     display: flex;
     gap: 2rem;
     align-items: center;
