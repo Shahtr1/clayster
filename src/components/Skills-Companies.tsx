@@ -56,12 +56,22 @@ function SkillsCompanies() {
         </div>
       </div>
       <div className="Companies">
-        <span>Noteworthy Full-Time Roles</span>
+        <div className="Heading">
+          <div className="Title-line-left Title-line">
+            <div className="Horizontal"></div>
+            <div className="Vertical"></div>
+          </div>
+          <span className="Text">Noteworthy Full-Time Roles</span>
+          <div className="Title-line-right Title-line">
+            <div className="Vertical"></div>
+            <div className="Horizontal"></div>
+          </div>
+        </div>
         <div className="Content">
-          <div className="Art-image"></div>
-          <div className="Pragtex-image"></div>
-          <div className="Cyberspark-image"></div>
-          <div className="Ascent-image"></div>
+          <div className="Art-image Image"></div>
+          <div className="Pragtex-image Image"></div>
+          <div className="Cyberspark-image Image"></div>
+          <div className="Ascent-image Image"></div>
         </div>
       </div>
       <div className="Empty"></div>

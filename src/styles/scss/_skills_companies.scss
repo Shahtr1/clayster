@@ -29,7 +29,7 @@
         background-color: $dark-blue;
         padding: 5px 3rem;
         color: white;
-        font-family: Roboto-medium, sans-serif;
+        font-family: Inter-regular, sans-serif;
         font-size: 2rem;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
@@ -139,14 +139,64 @@
   & .Companies {
     padding-top: 1rem;
     font-family: Roboto-medium, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(
+      90deg,
+      $dark-blue-op50 0%,
+      #fff 15%,
+      #fff 85%,
+      $dark-blue-op50 100%
+    );
 
-    & span {
-      color: $dark-blue;
+    & .Heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .Title-line {
+        align-items: center;
+        display: flex;
+
+        & .Horizontal {
+          width: 20rem;
+          height: 3px;
+        }
+
+        & .Vertical {
+          width: 3px;
+          height: 1.3rem;
+          background-color: $dark-blue;
+        }
+
+        &-left {
+          & .Horizontal {
+            background: linear-gradient(
+              270deg,
+              #2d237b 0%,
+              rgba(196, 196, 196, 0) 100%
+            );
+          }
+        }
+
+        &-right {
+          & .Horizontal {
+            background: linear-gradient(
+              90deg,
+              #2d237b 0%,
+              rgba(196, 196, 196, 0) 100%
+            );
+          }
+        }
+      }
+
+      & .Text {
+        color: $dark-blue;
+      }
     }
+
     & .Content {
       display: flex;
       height: 10rem;
@@ -154,33 +204,29 @@
       align-items: center;
       margin-bottom: 1rem;
 
-      & .Art-image {
-        width: 11rem;
+      & .Image {
         height: 7rem;
+        width: 15rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+
+      & .Art-image {
         background-image: url("/src/assets/icons/companies/Art.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
+
       & .Pragtex-image {
-        width: 7.1rem;
-        height: 9rem;
+        height: 8rem;
         background-image: url("/src/assets/icons/companies/pragtex.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
+
       & .Cyberspark-image {
-        width: 15rem;
-        height: 6rem;
         background-image: url("/src/assets/icons/companies/cyber-spark.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
+
       & .Ascent-image {
-        width: 15rem;
-        height: 6rem;
         background-image: url("/src/assets/icons/companies/ascent.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
     }
   }

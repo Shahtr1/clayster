@@ -115,7 +115,7 @@
         background-color: #2a3654;
         padding: 5px 3rem;
         color: white;
-        font-family: Roboto-medium, sans-serif;
+        font-family: Inter-regular, sans-serif;
         font-size: 2rem;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem; }
@@ -195,42 +195,52 @@
   .Skills-Companies-wrapper .Companies {
     padding-top: 1rem;
     font-family: Roboto-medium, sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
-    flex-direction: column; }
-    .Skills-Companies-wrapper .Companies span {
-      color: #2a3654; }
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(42, 54, 84, 0.5) 0%, #fff 15%, #fff 85%, rgba(42, 54, 84, 0.5) 100%); }
+    .Skills-Companies-wrapper .Companies .Heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+      .Skills-Companies-wrapper .Companies .Heading .Title-line {
+        align-items: center;
+        display: flex; }
+        .Skills-Companies-wrapper .Companies .Heading .Title-line .Horizontal {
+          width: 20rem;
+          height: 3px; }
+        .Skills-Companies-wrapper .Companies .Heading .Title-line .Vertical {
+          width: 3px;
+          height: 1.3rem;
+          background-color: #2a3654; }
+        .Skills-Companies-wrapper .Companies .Heading .Title-line-left .Horizontal {
+          background: linear-gradient(270deg, #2d237b 0%, rgba(196, 196, 196, 0) 100%); }
+        .Skills-Companies-wrapper .Companies .Heading .Title-line-right .Horizontal {
+          background: linear-gradient(90deg, #2d237b 0%, rgba(196, 196, 196, 0) 100%); }
+      .Skills-Companies-wrapper .Companies .Heading .Text {
+        color: #2a3654; }
     .Skills-Companies-wrapper .Companies .Content {
       display: flex;
       height: 10rem;
       gap: 10rem;
       align-items: center;
       margin-bottom: 1rem; }
-      .Skills-Companies-wrapper .Companies .Content .Art-image {
-        width: 11rem;
+      .Skills-Companies-wrapper .Companies .Content .Image {
         height: 7rem;
-        background-image: url("/src/assets/icons/companies/Art.png");
+        width: 15rem;
         background-repeat: no-repeat;
-        background-size: contain; }
+        background-size: contain;
+        background-position: center; }
+      .Skills-Companies-wrapper .Companies .Content .Art-image {
+        background-image: url("/src/assets/icons/companies/Art.png"); }
       .Skills-Companies-wrapper .Companies .Content .Pragtex-image {
-        width: 7.1rem;
-        height: 9rem;
-        background-image: url("/src/assets/icons/companies/pragtex.png");
-        background-repeat: no-repeat;
-        background-size: contain; }
+        height: 8rem;
+        background-image: url("/src/assets/icons/companies/pragtex.png"); }
       .Skills-Companies-wrapper .Companies .Content .Cyberspark-image {
-        width: 15rem;
-        height: 6rem;
-        background-image: url("/src/assets/icons/companies/cyber-spark.png");
-        background-repeat: no-repeat;
-        background-size: contain; }
+        background-image: url("/src/assets/icons/companies/cyber-spark.png"); }
       .Skills-Companies-wrapper .Companies .Content .Ascent-image {
-        width: 15rem;
-        height: 6rem;
-        background-image: url("/src/assets/icons/companies/ascent.png");
-        background-repeat: no-repeat;
-        background-size: contain; }
+        background-image: url("/src/assets/icons/companies/ascent.png"); }
   .Skills-Companies-wrapper .Empty {
     height: 4rem;
     background-color: #2a3654; }
@@ -251,7 +261,7 @@
   padding: 1rem 0;
   box-shadow: 0 0 0.3rem 0 #000; }
   .Socials > img {
-    scale: 0.7;
+    scale: 0.6;
     cursor: pointer; }
 
 @font-face {
