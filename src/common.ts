@@ -35,6 +35,8 @@ export function goTo(link: Links | string, isUrl = false): string | void {
         url = "https://www.instagram.com/shahrukhtramboo/";
     }
 
+    window.open(url, "_blank");
+
     return url;
   }
 

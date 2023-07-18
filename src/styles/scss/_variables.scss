@@ -3,11 +3,13 @@
 $dark-blue: #2a3654;
 $dark-blue-op50: rgba(42, 54, 84, 0.5);
 $dark-blue-op70: rgba(42, 54, 84, 0.7);
+$dark-blue-op95: rgba(42, 54, 84, 0.95);
 $dark-blue-op35: rgba(42, 54, 84, 0.35);
 
 $white-op10: rgba(255, 255, 255, 0.1);
 $white-op50: rgba(255, 255, 255, 0.5);
 $white-op80: rgba(255, 255, 255, 0.8);
+$white-op90: rgba(255, 255, 255, 0.9);
 
 $orange: #ff9e59;
 $dark-orange-var-1: #77390c;
@@ -23,6 +25,7 @@ $green: #52a625;
 // gradients
 
 $blue-gradient: linear-gradient(180deg, #2a3654 1.02%, #586c9c 100%);
+$blue-gradient-2: linear-gradient(0deg, #2a3654 1.02%, #586c9c 100%);
 $orange-gradient: linear-gradient(90deg, #e58642 0%, #75380b 100%);
 
 // shadows

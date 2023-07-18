@@ -449,11 +449,33 @@
           padding: 1rem 2rem; }
         .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper input {
           height: 4.5rem; }
-      .Contact-wrapper .Contact .Form-wrapper form button {
-        padding: 1rem 1.5rem;
+      .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper {
         border-radius: 1.5rem;
-        width: fit-content;
-        background-color: #9e551f; }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17rem;
+        background-color: #9e551f;
+        cursor: pointer;
+        position: relative; }
+        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper button {
+          padding: 1rem 0;
+          cursor: pointer; }
+        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper .spinner-container {
+          position: absolute; }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper .loading-spinner {
+          width: 30px;
+          height: 30px;
+          border: 5px solid white;
+          border-top: 5px solid #2a3654;
+          border-radius: 50%;
+          animation: spinner 1.5s linear infinite; }
 
 .Download-cv {
   font-size: 2rem;
@@ -462,7 +484,7 @@
   padding: 0 3rem;
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, #e58642 0%, #75380b 100%);
+  background: #2a3654;
   font-family: Roboto-regular, sans-serif;
   color: white; }
   .Download-cv .Download {

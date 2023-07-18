@@ -19,6 +19,7 @@ function CV(variant: ICV) {
         borderTopLeftRadius: variant.position === "absolute" ? "15px" : "unset",
         borderBottomLeftRadius: variant.position === "fixed" ? "15px" : "unset",
         zIndex: variant.position === "fixed" ? "999999" : "unset",
+        boxShadow: variant.position === "fixed" ? "0 0 0.3rem 0 #000" : "unset",
       }}
     >
       Get My CV{" "}

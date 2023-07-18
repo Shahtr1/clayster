@@ -102,11 +102,40 @@
         }
       }
 
-      & button {
-        padding: 1rem 1.5rem;
+      & .Button-wrapper {
         border-radius: $border-radius;
-        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 17rem;
         background-color: $dark-orange-var-2;
+        cursor: pointer;
+        position: relative;
+        & button {
+          padding: 1rem 0;
+          cursor: pointer;
+        }
+
+        & .spinner-container {
+          position: absolute;
+        }
+
+        @keyframes spinner {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        .loading-spinner {
+          width: 30px;
+          height: 30px;
+          border: 5px solid white;
+          border-top: 5px solid $dark-blue;
+          border-radius: 50%;
+          animation: spinner 1.5s linear infinite;
+        }
       }
     }
   }
