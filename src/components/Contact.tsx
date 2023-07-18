@@ -13,6 +13,7 @@ function Contact() {
   return (
     <div
       className="Contact-wrapper"
+      id="contact"
       style={{
         marginTop: showMore ? 0 : "-38rem",
       }}

@@ -14,7 +14,7 @@ import vue from "../assets/icons/skills/Vue.png";
 
 function SkillsCompanies() {
   return (
-    <div className="Skills-Companies-wrapper">
+    <div className="Skills-Companies-wrapper" id="skills">
       <img src={triangle} className="Triangle" alt="triangle" />
       <div className="Skills">
         <div className="Title-wrapper">

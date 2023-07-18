@@ -4,7 +4,7 @@ import triangle from "../assets/images/desktop/light-blue-triangle.png";
 
 function Home() {
   return (
-    <div className="Home-wrapper">
+    <div className="Home-wrapper" id="home">
       <img src={triangle} className="Triangle" alt="triangle" />
 
       <div className="Home">

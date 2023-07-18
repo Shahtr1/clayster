@@ -4,7 +4,7 @@ import { WorkData } from "../../data/works.data";
 
 function Works() {
   return (
-    <div className="Works-wrapper">
+    <div className="Works-wrapper" id="works">
       <div className="Works">
         <span className="Title">Works</span>
         <div className="Content-wrapper">

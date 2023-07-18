@@ -18,8 +18,18 @@
     padding: 1.5rem;
     border-radius: 500px;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
+
+    & img {
+      scale: 0.5;
+    }
+
+    & .Menu-item-wrapper {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
     & .Menu-item {
       padding: 0.5rem 2rem;
       border-radius: 50px;

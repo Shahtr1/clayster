@@ -11,6 +11,13 @@ import vue from "../assets/icons/skills/Vue.png";
 import t360pay from "../assets/icons/works/t360 logo.png";
 import rc from "../assets/icons/works/RC.png";
 
+export type MenuModel = "home" | "skills" | "works" | "contact";
+
+export interface MenuDetails {
+  title?: string;
+  menu: MenuModel;
+}
+
 export interface WorkDetails {
   titleIconBgColor?: string;
   titleIcon: logos;
