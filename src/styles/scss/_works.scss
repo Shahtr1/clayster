@@ -23,6 +23,15 @@
       border-top-right-radius: $border-radius;
     }
 
+    & .Work-item-info {
+      opacity: 0;
+
+      &.Animate {
+        transition: opacity 1s ease-out;
+        opacity: 1;
+      }
+    }
+
     & .Content-wrapper {
       display: flex;
       justify-content: center;

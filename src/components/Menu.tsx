@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MenuData } from "../data/menu.data";
 import { IMenu } from "../data/model";
 import ellipse from "../assets/icons/ellipse.png";
 
 function Menu(activeMenu: IMenu) {
+  useEffect(() => {
+    const menuElement = document.getElementById("menu-wrapper") as HTMLElement;
+    menuElement.classList.add("Animate");
+  });
+
   return (
-    <div className="Menu-wrapper">
+    <div className="Menu-wrapper" id="menu-wrapper">
       <div className="Menu">
         {MenuData.menus.map((menu, index) => (
           <span key={index} className="Menu-item-wrapper">

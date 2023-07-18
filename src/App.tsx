@@ -7,6 +7,7 @@ import Socials from "./components/Socials";
 import Contact from "./components/Contact";
 import { MenuOpts } from "./data/model";
 import CV from "./components/CV";
+import { isInViewport } from "./common";
 
 function App() {
   const [activeMenu, setActiveMenu] = useState<MenuOpts>("home");
@@ -21,28 +22,46 @@ function App() {
     window.onscroll = getOnscroll(maxAllowedOffsetHeight);
   }
 
-  function getOnscroll(maxAllowedOffsetHeight: number) {
+  function changeMenuState(
+    skills: HTMLElement,
+    maxAllowedOffsetHeight: number,
+  ) {
     const home = document.getElementById("home") as HTMLElement;
-    const skills = document.getElementById("skills") as HTMLElement;
     const works = document.getElementById("works") as HTMLElement;
     const contact = document.getElementById("contact") as HTMLElement;
+    if (Math.abs(home?.getBoundingClientRect().y) < maxAllowedOffsetHeight) {
+      setActiveMenu("home");
+    }
+    if (Math.abs(skills?.getBoundingClientRect().y) < maxAllowedOffsetHeight) {
+      setActiveMenu("skills");
+    }
+    if (works?.getBoundingClientRect().y < maxAllowedOffsetHeight) {
+      setActiveMenu("works");
+    }
+    if (contact?.getBoundingClientRect().y < maxAllowedOffsetHeight) {
+      setActiveMenu("contact");
+    }
+  }
+
+  function changeWorksState() {
+    const worksInfoElement = document.getElementsByClassName(
+      "Work-item-info",
+    ) as unknown as HTMLElement[];
+    for (const element of worksInfoElement) {
+      if (isInViewport(element)) {
+        element.classList.add("Animate");
+      }
+    }
+  }
+
+  function getOnscroll(maxAllowedOffsetHeight: number) {
+    const skills = document.getElementById("skills") as HTMLElement;
     return () => {
-      if (Math.abs(home?.getBoundingClientRect().y) < maxAllowedOffsetHeight) {
-        setActiveMenu("home");
-      }
-      if (
-        Math.abs(skills?.getBoundingClientRect().y) < maxAllowedOffsetHeight
-      ) {
-        setActiveMenu("skills");
-      }
-      if (works?.getBoundingClientRect().y < maxAllowedOffsetHeight) {
-        setActiveMenu("works");
-      }
-      if (contact?.getBoundingClientRect().y < maxAllowedOffsetHeight) {
-        setActiveMenu("contact");
-      }
+      changeMenuState(skills, maxAllowedOffsetHeight);
 
       setCvVisible(skills?.getBoundingClientRect().y <= 0);
+
+      changeWorksState();
     };
   }
 

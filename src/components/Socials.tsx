@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import github from "../assets/icons/socials/github.png";
 import linkedin from "../assets/icons/socials/linkedin.png";
 import tryhackme from "../assets/icons/socials/tryhackme-social.png";
 import twitter from "../assets/icons/socials/twitter.png";
 import instagram from "../assets/icons/socials/instagram.png";
-import { goTo } from "../data/model";
+import { goTo } from "../common";
 
 function Socials() {
+  useEffect(() => {
+    const menuElement = document.getElementById("socials") as HTMLElement;
+    menuElement.classList.add("Animate");
+  });
+
   return (
-    <div className="Socials">
+    <div className="Socials" id="socials">
       <img
         src={github}
         className="Github"

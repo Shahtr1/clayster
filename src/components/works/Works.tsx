@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WorkItem from "./Work-item";
 import { WorkData } from "../../data/works.data";
+import { isInViewport } from "../../common";
 
 function Works() {
+  useEffect(() => {
+    window.onscroll = () => {};
+  });
+
   return (
     <div className="Works-wrapper" id="works">
       <div className="Works">

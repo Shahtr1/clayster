@@ -1,6 +1,5 @@
 import React from "react";
 import triangle from "../assets/images/desktop/light-white-triangle.png";
-import download from "../assets/icons/download.png";
 import angular from "../assets/icons/skills/Angular.png";
 import figma from "../assets/icons/skills/Figma.png";
 import java from "../assets/icons/skills/Java.png";

@@ -9,8 +9,13 @@
   right: 0;
   display: flex;
   justify-content: center;
-  top: 0;
+  top: -5rem;
   z-index: 9999;
+
+  &.Animate {
+    transition: top 1s ease-out;
+    top: 0;
+  }
 
   & .Menu {
     box-shadow: 0 0 5px 0 $dark-blue;
