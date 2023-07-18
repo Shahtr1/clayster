@@ -1,9 +1,9 @@
-import { WorkDetails } from "./model";
+import { IWork } from "./model";
 import rc_cover from "../assets/images/desktop/works/rc.png";
 import t360pay_cover from "../assets/images/desktop/works/t360.png";
 
 export class WorkData {
-  static get works(): WorkDetails[] {
+  static get works(): IWork[] {
     return [
       {
         heading: "T360pay",

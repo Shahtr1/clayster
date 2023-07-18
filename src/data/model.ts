@@ -11,24 +11,24 @@ import vue from "../assets/icons/skills/Vue.png";
 import t360pay from "../assets/icons/works/t360 logo.png";
 import rc from "../assets/icons/works/RC.png";
 
-export type MenuModel = "home" | "skills" | "works" | "contact";
+export type MenuOpts = "home" | "skills" | "works" | "contact";
 
-export interface MenuDetails {
+export interface IMenu {
   title?: string;
-  menu: MenuModel;
+  menu: MenuOpts;
 }
 
-export interface WorkDetails {
+export interface IWork {
   titleIconBgColor?: string;
-  titleIcon: logos;
+  titleIcon: Logos;
   description: string;
-  skills: skills[];
+  skills: Skills[];
   link: string;
   cover: string;
   heading: string;
 }
 
-export type links =
+export type Links =
   | "github"
   | "linkedin"
   | "tryhackme"
@@ -37,7 +37,7 @@ export type links =
   | "t360pay"
   | "rc";
 
-export type skills =
+export type Skills =
   | "angular"
   | "figma"
   | "java"
@@ -49,9 +49,9 @@ export type skills =
   | "tryhackme"
   | "vue";
 
-export type logos = "t360pay" | "rc";
+export type Logos = "t360pay" | "rc";
 
-export function goTo(link: links | string, isUrl = false): string | void {
+export function goTo(link: Links | string, isUrl = false): string | void {
   let url = "";
 
   if (isUrl) {
@@ -80,7 +80,7 @@ export function goTo(link: links | string, isUrl = false): string | void {
   window.open(url, "_blank");
 }
 
-export function getTitleIcon(logo: logos): string {
+export function getTitleIcon(logo: Logos): string {
   switch (logo) {
     case "t360pay":
       return t360pay;
@@ -89,7 +89,7 @@ export function getTitleIcon(logo: logos): string {
   }
 }
 
-export function getSkillIcon(skill: skills): string {
+export function getSkillIcon(skill: Skills): string {
   switch (skill) {
     case "javascript":
       return javascript;

@@ -33,22 +33,6 @@
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
       }
-
-      & .Download-cv {
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-        padding: 0 3rem;
-        border-top-left-radius: $border-radius;
-        display: flex;
-        align-items: center;
-        background: $orange-gradient;
-        font-family: Roboto-regular, sans-serif;
-        color: white;
-        & .Download {
-          scale: 0.8;
-        }
-      }
     }
 
     & .Content-wrapper {

@@ -1,9 +1,9 @@
 import React from "react";
 import { MenuData } from "../data/menu.data";
-import { MenuDetails } from "../data/model";
+import { IMenu } from "../data/model";
 import ellipse from "../assets/icons/ellipse.png";
 
-function Menu(activeMenu: MenuDetails) {
+function Menu(activeMenu: IMenu) {
   return (
     <div className="Menu-wrapper">
       <div className="Menu">

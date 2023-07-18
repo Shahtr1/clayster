@@ -11,6 +11,7 @@ import node from "../assets/icons/skills/Node js.png";
 import react_icon from "../assets/icons/skills/React.png";
 import tryhackme from "../assets/icons/skills/TryHackMe.png";
 import vue from "../assets/icons/skills/Vue.png";
+import CV from "./CV";
 
 function SkillsCompanies() {
   return (
@@ -19,22 +20,7 @@ function SkillsCompanies() {
       <div className="Skills">
         <div className="Title-wrapper">
           <span className="Title">Skills</span>
-
-          <a
-            className="Download-cv"
-            href={require("../assets/files/shahrukh_resume.pdf")}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get My CV{" "}
-            <img
-              src={download}
-              className="Download"
-              alt="download"
-              width="43"
-              height="35"
-            />
-          </a>
+          <CV position="absolute"></CV>
         </div>
         <div className="Content-wrapper">
           <div className="Content">

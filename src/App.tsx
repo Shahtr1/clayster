@@ -5,22 +5,28 @@ import SkillsCompanies from "./components/Skills-Companies";
 import Works from "./components/works/Works";
 import Socials from "./components/Socials";
 import Contact from "./components/Contact";
-import { MenuModel } from "./data/model";
+import { MenuOpts } from "./data/model";
+import CV from "./components/CV";
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState<MenuModel>("home");
+  const [activeMenu, setActiveMenu] = useState<MenuOpts>("home");
 
-  useEffect(() => {
-    const home = document.getElementById("home") as HTMLElement;
-    const skills = document.getElementById("skills") as HTMLElement;
-    const works = document.getElementById("works") as HTMLElement;
-    const contact = document.getElementById("contact") as HTMLElement;
+  const [cvVisible, setCvVisible] = useState<boolean>(false);
 
+  function setupNavigation() {
     const windowInnerHeight = window.innerHeight;
     const maxAllowedOffsetHeight =
       windowInnerHeight - Math.round(windowInnerHeight / 3);
 
-    window.onscroll = () => {
+    window.onscroll = getOnscroll(maxAllowedOffsetHeight);
+  }
+
+  function getOnscroll(maxAllowedOffsetHeight: number) {
+    const home = document.getElementById("home") as HTMLElement;
+    const skills = document.getElementById("skills") as HTMLElement;
+    const works = document.getElementById("works") as HTMLElement;
+    const contact = document.getElementById("contact") as HTMLElement;
+    return () => {
       if (Math.abs(home?.getBoundingClientRect().y) < maxAllowedOffsetHeight) {
         setActiveMenu("home");
       }
@@ -35,11 +41,18 @@ function App() {
       if (contact?.getBoundingClientRect().y < maxAllowedOffsetHeight) {
         setActiveMenu("contact");
       }
+
+      setCvVisible(skills?.getBoundingClientRect().y <= 0);
     };
+  }
+
+  useEffect(() => {
+    setupNavigation();
   });
 
   return (
     <div className="App">
+      {cvVisible && <CV position="fixed"></CV>}
       <Menu menu={activeMenu}></Menu>
       <Home></Home>
       <SkillsCompanies></SkillsCompanies>

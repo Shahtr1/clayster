@@ -1,0 +1,16 @@
+@import "variables";
+
+.Download-cv {
+  font-size: 2rem;
+  cursor: pointer;
+  right: 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  background: $orange-gradient;
+  font-family: Roboto-regular, sans-serif;
+  color: white;
+  & .Download {
+    scale: 0.8;
+  }
+}

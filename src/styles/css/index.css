@@ -64,7 +64,7 @@
   display: flex;
   justify-content: center;
   top: 0;
-  z-index: 999999; }
+  z-index: 9999; }
   .Menu-wrapper .Menu {
     box-shadow: 0 0 5px 0 #2a3654;
     background-color: rgba(255, 255, 255, 0.8);
@@ -125,19 +125,6 @@
         font-family: Inter-regular, sans-serif;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem; }
-      .Skills-Companies-wrapper .Skills .Title-wrapper .Download-cv {
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-        padding: 0 3rem;
-        border-top-left-radius: 1.5rem;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(90deg, #e58642 0%, #75380b 100%);
-        font-family: Roboto-regular, sans-serif;
-        color: white; }
-        .Skills-Companies-wrapper .Skills .Title-wrapper .Download-cv .Download {
-          scale: 0.8; }
     .Skills-Companies-wrapper .Skills .Content-wrapper {
       width: 100%;
       background-color: #2a3654;
@@ -447,6 +434,20 @@
         border-radius: 1.5rem;
         width: fit-content;
         background-color: #9e551f; }
+
+.Download-cv {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #e58642 0%, #75380b 100%);
+  font-family: Roboto-regular, sans-serif;
+  color: white; }
+  .Download-cv .Download {
+    scale: 0.8; }
 
 @font-face {
   font-family: "Roboto-regular";

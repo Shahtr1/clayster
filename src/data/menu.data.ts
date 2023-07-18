@@ -1,7 +1,7 @@
-import { MenuDetails } from "./model";
+import { IMenu } from "./model";
 
 export class MenuData {
-  static get menus(): MenuDetails[] {
+  static get menus(): IMenu[] {
     return [
       {
         menu: "home",

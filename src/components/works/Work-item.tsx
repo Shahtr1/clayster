@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  getSkillIcon,
-  getTitleIcon,
-  goTo,
-  WorkDetails,
-} from "../../data/model";
+import { getSkillIcon, getTitleIcon, goTo, IWork } from "../../data/model";
 
-function WorkItem(work: WorkDetails) {
+function WorkItem(work: IWork) {
   return (
     <div className="Work-item">
       <div className="Heading">{work.heading}</div>
