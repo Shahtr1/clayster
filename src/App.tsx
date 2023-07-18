@@ -4,6 +4,7 @@ import Menu from "./components/Menu";
 import SkillsCompanies from "./components/Skills-Companies";
 import Works from "./components/works/Works";
 import Socials from "./components/Socials";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <SkillsCompanies></SkillsCompanies>
       <Works></Works>
       <Socials></Socials>
+      <Contact></Contact>
     </div>
   );
 }

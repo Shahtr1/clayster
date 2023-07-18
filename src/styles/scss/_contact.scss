@@ -1,0 +1,113 @@
+@import "variables";
+
+.Contact-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin-top 0.5s ease-out;
+
+  & .Title-wrapper {
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 10rem;
+    background: linear-gradient(0, #fff 0%, transparent 100%);
+
+    & .Title {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      padding: 5px 3rem;
+      color: white;
+      font-family: Inter-regular, sans-serif;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      background-color: $dark-blue;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & .Content-wrapper {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    & .Heading,
+    & .Subheading {
+      text-align: center;
+    }
+
+    & .Heading {
+      font-family: League-Spartan-regular, sans-serif;
+      font-size: 4rem;
+      & span {
+        color: $dark-orange-var-3;
+      }
+    }
+
+    & .Subheading {
+      font-family: Inter-regular, sans-serif;
+      font-size: 2rem;
+    }
+  }
+
+  & .Contact {
+    background-color: $dark-blue;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 0;
+    z-index: 0;
+    gap: 8rem;
+    & .Dust {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url("../../assets/images/desktop/texture-dust.png");
+      background-size: contain;
+    }
+    & .Form-wrapper form {
+      font-family: Inter-medium, sans-serif;
+      font-size: 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      & .Field-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        & input,
+        textarea {
+          background-color: $white-op80;
+          border-radius: $border-radius;
+          color: $dark-blue;
+          padding: 1rem 2rem;
+        }
+
+        & input {
+          height: 4.5rem;
+        }
+      }
+
+      & button {
+        padding: 1rem 1.5rem;
+        border-radius: $border-radius;
+        width: fit-content;
+        background-color: $dark-orange-var-2;
+      }
+    }
+  }
+}

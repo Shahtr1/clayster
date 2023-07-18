@@ -19,7 +19,13 @@ function SkillsCompanies() {
       <div className="Skills">
         <div className="Title-wrapper">
           <span className="Title">Skills</span>
-          <span className="Download-cv">
+
+          <a
+            className="Download-cv"
+            href={require("../assets/files/shahrukh_resume.pdf")}
+            target="_blank"
+            rel="noreferrer"
+          >
             Get My CV{" "}
             <img
               src={download}
@@ -28,7 +34,7 @@ function SkillsCompanies() {
               width="43"
               height="35"
             />
-          </span>
+          </a>
         </div>
         <div className="Content-wrapper">
           <div className="Content">

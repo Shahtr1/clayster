@@ -325,8 +325,9 @@
           .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Company-icon-wrapper img {
             scale: 0.8; }
         .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-link {
-          text-decoration: underline;
           cursor: pointer; }
+          .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-link:hover {
+            text-decoration: underline; }
         .Work-item .Work-item-Content-wrapper .Work-item-info-wrapper .Work-item-info .Work-item-skill {
           display: flex;
           align-items: center;
@@ -352,6 +353,94 @@
   .Socials > img {
     scale: 0.6;
     cursor: pointer; }
+
+.Contact-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin-top 0.5s ease-out; }
+  .Contact-wrapper .Title-wrapper {
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 10rem;
+    background: linear-gradient(0, #fff 0%, transparent 100%); }
+    .Contact-wrapper .Title-wrapper .Title {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      padding: 5px 3rem;
+      color: white;
+      font-family: Inter-regular, sans-serif;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      background-color: #2a3654;
+      cursor: pointer; }
+      .Contact-wrapper .Title-wrapper .Title:hover {
+        text-decoration: underline; }
+  .Contact-wrapper .Content-wrapper {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+    .Contact-wrapper .Content-wrapper .Heading,
+    .Contact-wrapper .Content-wrapper .Subheading {
+      text-align: center; }
+    .Contact-wrapper .Content-wrapper .Heading {
+      font-family: League-Spartan-regular, sans-serif;
+      font-size: 4rem; }
+      .Contact-wrapper .Content-wrapper .Heading span {
+        color: #fba05d; }
+    .Contact-wrapper .Content-wrapper .Subheading {
+      font-family: Inter-regular, sans-serif;
+      font-size: 2rem; }
+  .Contact-wrapper .Contact {
+    background-color: #2a3654;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 3rem 0;
+    z-index: 0;
+    gap: 8rem; }
+    .Contact-wrapper .Contact .Dust {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url("../../assets/images/desktop/texture-dust.png");
+      background-size: contain; }
+    .Contact-wrapper .Contact .Form-wrapper form {
+      font-family: Inter-medium, sans-serif;
+      font-size: 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; }
+      .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; }
+        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper input,
+        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper textarea {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 1.5rem;
+          color: #2a3654;
+          padding: 1rem 2rem; }
+        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper input {
+          height: 4.5rem; }
+      .Contact-wrapper .Contact .Form-wrapper form button {
+        padding: 1rem 1.5rem;
+        border-radius: 1.5rem;
+        width: fit-content;
+        background-color: #9e551f; }
 
 @font-face {
   font-family: "Roboto-regular";
