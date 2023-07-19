@@ -134,52 +134,6 @@
       $dark-blue-op50 100%
     );
 
-    & .Heading {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      & .Title-line {
-        align-items: center;
-        display: flex;
-
-        & .Horizontal {
-          width: 20rem;
-          height: 3px;
-        }
-
-        & .Vertical {
-          width: 3px;
-          height: 1.3rem;
-          background-color: $dark-blue;
-        }
-
-        &-left {
-          & .Horizontal {
-            background: linear-gradient(
-              270deg,
-              #2d237b 0%,
-              rgba(196, 196, 196, 0) 100%
-            );
-          }
-        }
-
-        &-right {
-          & .Horizontal {
-            background: linear-gradient(
-              90deg,
-              #2d237b 0%,
-              rgba(196, 196, 196, 0) 100%
-            );
-          }
-        }
-      }
-
-      & .Text {
-        color: $dark-blue;
-      }
-    }
-
     & .Content {
       display: flex;
       height: 10rem;

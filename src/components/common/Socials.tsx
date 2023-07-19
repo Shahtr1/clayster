@@ -6,14 +6,17 @@ import twitter from "../../assets/icons/socials/twitter.png";
 import instagram from "../../assets/icons/socials/instagram.png";
 import { goTo } from "../../Common";
 
-function Socials() {
+function Socials(props: { variant: "horizontal" | "vertical" }) {
   useEffect(() => {
     const menuElement = document.getElementById("socials") as HTMLElement;
     menuElement.classList.add("Animate");
   });
 
   return (
-    <div className="Socials" id="socials">
+    <div
+      className={`Socials ${props.variant === "horizontal" ? "Mobile" : ""}`}
+      id="socials"
+    >
       <img
         src={github}
         className="Github"

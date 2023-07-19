@@ -11,6 +11,7 @@ import react_icon from "../../assets/icons/skills/React.png";
 import tryhackme from "../../assets/icons/skills/TryHackMe.png";
 import vue from "../../assets/icons/skills/Vue.png";
 import CV from "./CV";
+import Title from "../common/Title";
 
 function SkillsCompanies(cvProps: { showCV: boolean }) {
   return (
@@ -47,17 +48,7 @@ function SkillsCompanies(cvProps: { showCV: boolean }) {
         </div>
       </div>
       <div className="Companies">
-        <div className="Heading">
-          <div className="Title-line-left Title-line">
-            <div className="Horizontal"></div>
-            <div className="Vertical"></div>
-          </div>
-          <span className="Text">Noteworthy Full-Time Roles</span>
-          <div className="Title-line-right Title-line">
-            <div className="Vertical"></div>
-            <div className="Horizontal"></div>
-          </div>
-        </div>
+        <Title title="Noteworthy Full-Time Roles" variant="large"></Title>
         <div className="Content">
           <div className="Art-image Image"></div>
           <div className="Pragtex-image Image"></div>

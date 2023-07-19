@@ -26,11 +26,13 @@ $green: #52a625;
 
 $blue-gradient: linear-gradient(180deg, #2a3654 1.02%, #586c9c 100%);
 $blue-gradient-2: linear-gradient(0deg, #2a3654 1.02%, #586c9c 100%);
+$blue-gradient-3: linear-gradient(0deg, #a3a3a3 1.02%, #9cb5ef 100%);
 $orange-gradient: linear-gradient(90deg, #e58642 0%, #75380b 100%);
 
 // shadows
 $box-shadow: 0 0 0.3rem 0 #000;
 $box-shadow-blue: 0 0 0.3rem 0 $dark-blue;
+$box-shadow-blue-bg: 0 0 1rem 0 $dark-blue;
 
 // spacings
 
@@ -45,3 +47,6 @@ $mobile-menu-bottom-spacing: 0.4rem;
 $mobile-max-height: calc(
   100dvh - (#{$mobile-menu-height} + #{$mobile-menu-bottom-spacing})
 );
+
+$works-carousel-height: 32.5rem;
+$works-carousel-padding: 2rem;

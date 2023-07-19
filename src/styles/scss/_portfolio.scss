@@ -3,4 +3,61 @@
 .Portfolio-mb-wrapper {
   min-height: $mobile-max-height;
   overflow: hidden;
+  & .Intro-mb {
+    height: calc(100dvh - 48rem);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    & img {
+      margin-left: -3rem;
+    }
+    & .Content-mb {
+      padding-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      color: $dark-blue;
+
+      & .About-mb {
+        font-family: Roboto-regular, sans-serif;
+        text-align: end;
+        font-size: 3.5rem;
+        margin-right: -12rem;
+
+        &.Animate {
+          transition: margin-right 1s ease-out;
+          margin-right: unset;
+        }
+      }
+      & .Name-mb {
+        border-top: 2px solid $dark-orange-var-1;
+        padding-top: 1rem;
+        font-family: League-Spartan-light, sans-serif;
+        text-align: end;
+        font-size: 2.2rem;
+        & > span {
+          & span {
+            font-family: League-Spartan-regular, sans-serif;
+          }
+        }
+      }
+
+      & .CV-mb {
+        font-family: Roboto-regular, sans-serif;
+        border: 2px solid $dark-blue;
+        border-radius: 50px;
+        width: fit-content;
+        padding: 0.3rem 1rem;
+        margin-left: auto;
+        font-size: 1.3rem;
+        &:active {
+          transition: background-color 0.5s ease-out;
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
 }

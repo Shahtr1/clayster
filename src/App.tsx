@@ -3,7 +3,7 @@ import Home from "./components/desktop/Home";
 import Menu from "./components/desktop/Menu";
 import SkillsCompanies from "./components/desktop/Skills-Companies";
 import Works from "./components/desktop/works/Works";
-import Socials from "./components/desktop/Socials";
+import Socials from "./components/common/Socials";
 import Contact from "./components/desktop/Contact";
 import { MenuOpts } from "./data/model";
 import CV from "./components/desktop/CV";
@@ -86,6 +86,7 @@ function App() {
 
   return (
     <div className="App">
+      <Socials variant={mobileView ? "horizontal" : "vertical"}></Socials>
       {!mobileView && (
         <>
           {cvVisible && <CV position="fixed"></CV>}
@@ -93,7 +94,6 @@ function App() {
           <Home></Home>
           <SkillsCompanies showCV={!cvVisible}></SkillsCompanies>
           <Works></Works>
-          <Socials></Socials>
           <Contact></Contact>
         </>
       )}

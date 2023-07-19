@@ -1,0 +1,25 @@
+@import "variables";
+
+.Carousel-wrapper {
+  position: relative;
+  & .Carousel {
+    padding: $works-carousel-padding;
+    display: flex;
+    overflow: auto;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    & .Carousel-item {
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-blue-bg;
+      background: $dark-blue;
+      font-size: 5rem;
+      width: 25rem;
+      height: $works-carousel-height;
+      flex-shrink: 0;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
