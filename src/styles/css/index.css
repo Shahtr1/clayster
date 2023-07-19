@@ -433,51 +433,6 @@
       z-index: -1;
       background-image: url("../../assets/images/texture-dust.png");
       background-size: contain; }
-    .Contact-wrapper .Contact .Form-wrapper form {
-      font-family: Inter-medium, sans-serif;
-      font-size: 1.7rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem; }
-      .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem; }
-        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper input,
-        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper textarea {
-          background-color: rgba(255, 255, 255, 0.8);
-          border-radius: 1.5rem;
-          color: #2a3654;
-          padding: 1rem 2rem; }
-        .Contact-wrapper .Contact .Form-wrapper form .Field-wrapper input {
-          height: 4.5rem; }
-      .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper {
-        border-radius: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 17rem;
-        background-color: #9e551f;
-        cursor: pointer;
-        position: relative; }
-        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper button {
-          padding: 1rem 0;
-          cursor: pointer; }
-        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper .spinner-container {
-          position: absolute; }
-
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-        .Contact-wrapper .Contact .Form-wrapper form .Button-wrapper .loading-spinner {
-          width: 30px;
-          height: 30px;
-          border: 5px solid white;
-          border-top: 5px solid #2a3654;
-          border-radius: 50%;
-          animation: spinner 1.5s linear infinite; }
 
 .Download-cv {
   font-size: 2rem;
@@ -660,6 +615,7 @@
     align-items: center;
     gap: 3rem; }
     .Skills-mb-wrapper .Skills-mb .Skills-Content-mb-intro {
+      color: #2a3654;
       font-family: Inter-regular, sans-serif;
       font-size: 1.5rem; }
     .Skills-mb-wrapper .Skills-mb .Skills-Content-mb .Skills-mb-icons {
@@ -674,6 +630,70 @@
       gap: 2rem; }
       .Skills-mb-wrapper .Skills-mb .Skills-Content-mb .Skills-mb-icons img:not(.Jquery) {
         height: 5rem; }
+
+.Contact-mb-wrapper {
+  font-family: Roboto-regular, sans-serif;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; }
+  .Contact-mb-wrapper .Contact-mb-form-wrapper {
+    background-color: #2a3654;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 1.5rem; }
+
+.Form-wrapper form {
+  font-family: Inter-medium, sans-serif;
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+  .Form-wrapper form .Field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; }
+    .Form-wrapper form .Field-wrapper input,
+    .Form-wrapper form .Field-wrapper textarea {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 1.5rem;
+      color: #2a3654;
+      padding: 1rem 2rem; }
+    .Form-wrapper form .Field-wrapper input {
+      height: 4.5rem; }
+  .Form-wrapper form .Button-wrapper {
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    background-color: #9e551f;
+    cursor: pointer;
+    position: relative; }
+    .Form-wrapper form .Button-wrapper button {
+      padding: 1rem 0;
+      cursor: pointer; }
+    .Form-wrapper form .Button-wrapper .spinner-container {
+      position: absolute; }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+    .Form-wrapper form .Button-wrapper .loading-spinner {
+      width: 30px;
+      height: 30px;
+      border: 5px solid white;
+      border-top: 5px solid #2a3654;
+      border-radius: 50%;
+      animation: spinner 1.5s linear infinite; }
 
 @font-face {
   font-family: "Roboto-regular";

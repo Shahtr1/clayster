@@ -1,0 +1,62 @@
+@import "variables";
+
+.Form-wrapper form {
+  font-family: Inter-medium, sans-serif;
+  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  & .Field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & input,
+    textarea {
+      background-color: $white-op80;
+      border-radius: $border-radius;
+      color: $dark-blue;
+      padding: 1rem 2rem;
+    }
+
+    & input {
+      height: 4.5rem;
+    }
+  }
+
+  & .Button-wrapper {
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $dark-orange-var-2;
+    cursor: pointer;
+    position: relative;
+    & button {
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+
+    & .spinner-container {
+      position: absolute;
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .loading-spinner {
+      width: 30px;
+      height: 30px;
+      border: 5px solid white;
+      border-top: 5px solid $dark-blue;
+      border-radius: 50%;
+      animation: spinner 1.5s linear infinite;
+    }
+  }
+}

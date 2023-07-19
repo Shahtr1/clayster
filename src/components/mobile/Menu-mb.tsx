@@ -3,7 +3,6 @@ import { MenuData } from "../../data/menu.data";
 import { getMenuIcon } from "../../Common";
 
 function MenuMb(props: any) {
-  console.log("props", props);
   return (
     <div className="Menu-mb-wrapper">
       <div className="Menu-mb">
