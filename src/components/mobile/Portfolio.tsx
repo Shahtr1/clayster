@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import WorksMb from "./Works-mb";
 import shahrukh from "../../assets/images/Shahrukh.png";
+import SkillsMb from "./Skills-mb";
 
 function Portfolio(props: any) {
   const { menu } = props.activeMenu;
@@ -36,7 +37,7 @@ function Portfolio(props: any) {
           </div>
         </div>
         {menu === "works" && <WorksMb></WorksMb>}
-        {menu === "skills" && "skills"}
+        {menu === "skills" && <SkillsMb></SkillsMb>}
         {menu === "contact" && "contact"}
       </div>
     </div>
