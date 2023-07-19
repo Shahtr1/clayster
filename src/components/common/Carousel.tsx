@@ -1,35 +1,34 @@
 import React from "react";
 import { useSnapCarousel } from "react-snap-carousel";
+import { IWork } from "../../data/model";
+import { getTitleIcon, goTo } from "../../Common";
+import link from "../../assets/icons/link.png";
 
-function Carousel(carouselProps: { data: any[] }) {
-  const { scrollRef, pages, activePageIndex, next, prev, goTo } =
-    useSnapCarousel();
+function Carousel(carouselProps: { data: IWork[] }) {
+  const { scrollRef } = useSnapCarousel();
   return (
     <div className="Carousel-wrapper">
       <ul ref={scrollRef} className="Carousel">
-        {carouselProps.data.map((prop, index) => (
-          <li className="Carousel-item" key={index}>
-            {prop.heading}
+        {carouselProps.data.map((work, index) => (
+          <li
+            className="Carousel-item"
+            key={index}
+            style={{ backgroundImage: `url(${work.cover})` }}
+          >
+            <div className="Carousel-item-heading">
+              <img src={getTitleIcon(work.titleIcon)} alt={work.heading} />
+            </div>
+            <div
+              className="Carousel-item-link"
+              onClick={() => goTo(work.link, true)}
+            >
+              <img src={link} alt="link" />
+            </div>
+
+            <div className="Carousel-item-content">{work.description}</div>
           </li>
         ))}
       </ul>
-      {/*<div>*/}
-      {/*  {activePageIndex + 1} / {pages.length}*/}
-      {/*</div>*/}
-      {/*<button onClick={() => prev()}>Prev</button>*/}
-      {/*<button onClick={() => next()}>Next</button>*/}
-      {/*<ol style={{ display: "flex" }}>*/}
-      {/*  {pages.map((_, i) => (*/}
-      {/*    <li key={i}>*/}
-      {/*      <button*/}
-      {/*        style={i === activePageIndex ? { opacity: 0.5 } : {}}*/}
-      {/*        onClick={() => goTo(i)}*/}
-      {/*      >*/}
-      {/*        {i + 1}*/}
-      {/*      </button>*/}
-      {/*    </li>*/}
-      {/*  ))}*/}
-      {/*</ol>*/}
     </div>
   );
 }

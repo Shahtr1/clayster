@@ -577,15 +577,45 @@
     .Carousel-wrapper .Carousel .Carousel-item {
       border-radius: 1.5rem;
       box-shadow: 0 0 1rem 0 #2a3654;
-      background: #2a3654;
-      font-size: 5rem;
+      background-color: #2a3654;
       width: 25rem;
       height: 32.5rem;
       flex-shrink: 0;
       color: #fff;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 1rem;
+      position: relative; }
+      .Carousel-wrapper .Carousel .Carousel-item-link {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer; }
+      .Carousel-wrapper .Carousel .Carousel-item-heading, .Carousel-wrapper .Carousel .Carousel-item-content {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(42, 54, 84, 0.85); }
+      .Carousel-wrapper .Carousel .Carousel-item-heading {
+        top: 0;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem; }
+        .Carousel-wrapper .Carousel .Carousel-item-heading img {
+          scale: 0.5; }
+      .Carousel-wrapper .Carousel .Carousel-item-content {
+        height: 12rem;
+        display: flex;
+        align-items: start;
+        font-family: Inter-regular, sans-serif;
+        font-size: 1.5rem;
+        bottom: 0;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        padding: 1rem; }
 
 .Title-wrapper {
   display: flex;

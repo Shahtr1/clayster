@@ -11,8 +11,7 @@
     & .Carousel-item {
       border-radius: $border-radius;
       box-shadow: $box-shadow-blue-bg;
-      background: $dark-blue;
-      font-size: 5rem;
+      background-color: $dark-blue;
       width: 25rem;
       height: $works-carousel-height;
       flex-shrink: 0;
@@ -20,6 +19,46 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 1rem;
+      position: relative;
+
+      &-link {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+      }
+
+      &-heading,
+      &-content {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        background-color: $dark-blue-op85;
+      }
+
+      &-heading {
+        top: 0;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        & img {
+          scale: 0.5;
+        }
+      }
+      &-content {
+        height: 12rem;
+        display: flex;
+        align-items: start;
+        font-family: Inter-regular, sans-serif;
+        font-size: 1.5rem;
+        bottom: 0;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        padding: 1rem;
+      }
     }
   }
 }
