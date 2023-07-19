@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import WorkItem from "./Work-item";
-import { WorkData } from "../../data/works.data";
-import { isInViewport } from "../../common";
+import { WorkData } from "../../../data/works.data";
+import { isInViewport } from "../../../common";
 
 function Works() {
   useEffect(() => {

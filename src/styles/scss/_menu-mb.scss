@@ -1,0 +1,34 @@
+@import "variables";
+
+.Menu-mb-wrapper {
+  font-family: Roboto-medium, sans-serif;
+  color: $dark-blue;
+  position: fixed;
+  bottom: 4rem;
+  left: 0;
+  right: 0.4rem;
+  height: 4rem;
+  & .Menu-mb {
+    margin: 0 0.2rem 0.2rem 0.2rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    box-shadow: $box-shadow-blue;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 4rem 0.5rem 4rem;
+    & .Menu-mb-item {
+      border-top: 0.3rem solid transparent;
+      padding-top: 0.5rem;
+      font-size: 1.4rem;
+      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      & img {
+        scale: 0.9;
+      }
+    }
+  }
+}

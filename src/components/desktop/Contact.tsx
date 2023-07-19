@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 
-import down_arrow from "../assets/icons/down-arrow.png";
-import up_arrow from "../assets/icons/up-arrow.png";
-import letter_box from "../assets/icons/letter-box.png";
+import down_arrow from "../../assets/icons/down-arrow.png";
+import up_arrow from "../../assets/icons/up-arrow.png";
+import letter_box from "../../assets/icons/letter-box.png";
 import { toast, ToastContainer, ToastOptions } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

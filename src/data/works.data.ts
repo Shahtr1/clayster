@@ -1,6 +1,6 @@
 import { IWork } from "./model";
-import rc_cover from "../assets/images/desktop/works/rc.png";
-import t360pay_cover from "../assets/images/desktop/works/t360.png";
+import rc_cover from "../assets/images/works/rc.png";
+import t360pay_cover from "../assets/images/works/t360.png";
 
 export class WorkData {
   static get works(): IWork[] {

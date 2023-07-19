@@ -1,15 +1,15 @@
 import React from "react";
-import triangle from "../assets/images/desktop/light-white-triangle.png";
-import angular from "../assets/icons/skills/Angular.png";
-import figma from "../assets/icons/skills/Figma.png";
-import java from "../assets/icons/skills/Java.png";
-import javascript from "../assets/icons/skills/Javascript.png";
-import jquery from "../assets/icons/skills/Jquery.png";
-import laravel from "../assets/icons/skills/Laravel.png";
-import node from "../assets/icons/skills/Node js.png";
-import react_icon from "../assets/icons/skills/React.png";
-import tryhackme from "../assets/icons/skills/TryHackMe.png";
-import vue from "../assets/icons/skills/Vue.png";
+import triangle from "../../assets/images/light-white-triangle.png";
+import angular from "../../assets/icons/skills/Angular.png";
+import figma from "../../assets/icons/skills/Figma.png";
+import java from "../../assets/icons/skills/Java.png";
+import javascript from "../../assets/icons/skills/Javascript.png";
+import jquery from "../../assets/icons/skills/Jquery.png";
+import laravel from "../../assets/icons/skills/Laravel.png";
+import node from "../../assets/icons/skills/Node js.png";
+import react_icon from "../../assets/icons/skills/React.png";
+import tryhackme from "../../assets/icons/skills/TryHackMe.png";
+import vue from "../../assets/icons/skills/Vue.png";
 import CV from "./CV";
 
 function SkillsCompanies() {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import shahrukh from "../assets/images/desktop/Shahrukh.png";
-import triangle from "../assets/images/desktop/light-blue-triangle.png";
+import shahrukh from "../../assets/images/Shahrukh.png";
+import triangle from "../../assets/images/light-blue-triangle.png";
 
 function Home() {
   useEffect(() => {

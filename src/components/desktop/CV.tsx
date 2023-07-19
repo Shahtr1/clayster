@@ -1,5 +1,5 @@
 import React from "react";
-import download from "../assets/icons/download.png";
+import download from "../../assets/icons/download.png";
 
 export type CvPosition = "absolute" | "fixed";
 
@@ -11,7 +11,7 @@ function CV(variant: ICV) {
   return (
     <a
       className="Download-cv"
-      href={require("../assets/files/shahrukh_resume.pdf")}
+      href={require("../../assets/files/shahrukh_resume.pdf")}
       target="_blank"
       rel="noreferrer"
       style={{

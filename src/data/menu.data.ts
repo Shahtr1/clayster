@@ -21,4 +21,21 @@ export class MenuData {
       },
     ];
   }
+  static get menusMb(): IMenu[] {
+    return [
+      {
+        menu: "works",
+        title: "Portfolio",
+      },
+      {
+        menu: "skills",
+        title: "Skills",
+      },
+
+      {
+        menu: "contact",
+        title: "Contact Me",
+      },
+    ];
+  }
 }

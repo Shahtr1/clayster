@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { MenuData } from "../data/menu.data";
-import { IMenu } from "../data/model";
-import ellipse from "../assets/icons/ellipse.png";
+import { MenuData } from "../../data/menu.data";
+import { IMenu } from "../../data/model";
+import ellipse from "../../assets/icons/ellipse.png";
 
 function Menu(activeMenu: IMenu) {
   useEffect(() => {
-    const menuElement = document.getElementById("menu-wrapper") as HTMLElement;
-    menuElement.classList.add("Animate");
+    const menuElement = document.getElementById("menus-wrapper") as HTMLElement;
+    menuElement?.classList.add("Animate");
   });
 
   return (

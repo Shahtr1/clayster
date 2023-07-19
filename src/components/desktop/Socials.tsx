@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import github from "../assets/icons/socials/github.png";
-import linkedin from "../assets/icons/socials/linkedin.png";
-import tryhackme from "../assets/icons/socials/tryhackme-social.png";
-import twitter from "../assets/icons/socials/twitter.png";
-import instagram from "../assets/icons/socials/instagram.png";
-import { goTo } from "../common";
+import github from "../../assets/icons/socials/github.png";
+import linkedin from "../../assets/icons/socials/linkedin.png";
+import tryhackme from "../../assets/icons/socials/tryhackme-social.png";
+import twitter from "../../assets/icons/socials/twitter.png";
+import instagram from "../../assets/icons/socials/instagram.png";
+import { goTo } from "../../common";
 
 function Socials() {
   useEffect(() => {

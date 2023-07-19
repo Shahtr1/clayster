@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
-import Home from "./components/Home";
-import Menu from "./components/Menu";
-import SkillsCompanies from "./components/Skills-Companies";
-import Works from "./components/works/Works";
-import Socials from "./components/Socials";
-import Contact from "./components/Contact";
+import React, { useEffect, useLayoutEffect, useState } from "react";
+import Home from "./components/desktop/Home";
+import Menu from "./components/desktop/Menu";
+import SkillsCompanies from "./components/desktop/Skills-Companies";
+import Works from "./components/desktop/works/Works";
+import Socials from "./components/desktop/Socials";
+import Contact from "./components/desktop/Contact";
 import { MenuOpts } from "./data/model";
-import CV from "./components/CV";
+import CV from "./components/desktop/CV";
 import { isInViewport } from "./common";
+import MenuMb from "./components/mobile/Menu-mb";
 
 function App() {
+  const [mobileView, setMobileView] = useState<boolean>(false);
+
   const [activeMenu, setActiveMenu] = useState<MenuOpts>("home");
 
   const [cvVisible, setCvVisible] = useState<boolean>(false);
@@ -65,19 +68,39 @@ function App() {
     };
   }
 
+  function checkScreenResolution() {
+    setMobileView(window.innerWidth < 900);
+  }
+
+  useLayoutEffect(() => {
+    window.onresize = () => {
+      checkScreenResolution();
+    };
+    checkScreenResolution();
+  });
+
   useEffect(() => {
-    setupNavigation();
+    if (!mobileView) setupNavigation();
   });
 
   return (
     <div className="App">
-      {cvVisible && <CV position="fixed"></CV>}
-      <Menu menu={activeMenu}></Menu>
-      <Home></Home>
-      <SkillsCompanies></SkillsCompanies>
-      <Works></Works>
-      <Socials></Socials>
-      <Contact></Contact>
+      {!mobileView && (
+        <>
+          {cvVisible && <CV position="fixed"></CV>}
+          <Menu menu={activeMenu}></Menu>
+          <Home></Home>
+          <SkillsCompanies></SkillsCompanies>
+          <Works></Works>
+          <Socials></Socials>
+          <Contact></Contact>
+        </>
+      )}
+      {mobileView && (
+        <>
+          <MenuMb menu={"works"}></MenuMb>
+        </>
+      )}
     </div>
   );
 }

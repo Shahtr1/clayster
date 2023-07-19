@@ -10,7 +10,13 @@ import tryhackme from "./assets/icons/skills/TryHackMe.png";
 import vue from "./assets/icons/skills/Vue.png";
 import t360pay from "./assets/icons/works/t360 logo.png";
 import rc from "./assets/icons/works/RC.png";
-import { Links, Logos, Skills } from "./data/model";
+import { Links, Logos, MenuOpts, Skills } from "./data/model";
+import portfolio from "./assets/icons/menus/portfolio.png";
+import active_portfolio from "./assets/icons/menus/active_portfolio.png";
+import skills from "./assets/icons/menus/skills.png";
+import active_skills from "./assets/icons/menus/active_skills.png";
+import contact from "./assets/icons/menus/contact.png";
+import active_contact from "./assets/icons/menus/active_contact.png";
 
 export function goTo(link: Links | string, isUrl = false): string | void {
   let url = "";
@@ -49,6 +55,17 @@ export function getTitleIcon(logo: Logos): string {
       return t360pay;
     default:
       return rc;
+  }
+}
+
+export function getMenuIcon(menu: MenuOpts, activeMenu: MenuOpts): string {
+  switch (menu) {
+    case "works":
+      return activeMenu === "works" ? active_portfolio : portfolio;
+    case "skills":
+      return activeMenu === "skills" ? active_skills : skills;
+    default:
+      return activeMenu === "contact" ? active_contact : contact;
   }
 }
 
