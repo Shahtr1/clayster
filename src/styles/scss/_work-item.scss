@@ -47,6 +47,20 @@
         font-size: 1.7rem;
         color: white;
         text-align: center;
+
+        & .Work-item-button {
+          background-color: white;
+          color: $dark-blue;
+          cursor: pointer;
+          width: fit-content;
+          border-radius: 50px;
+          margin: auto;
+          padding: 0.5rem 3rem;
+          &:hover {
+            background-color: $white-op50;
+          }
+        }
+
         & .Company-icon-wrapper {
           display: flex;
           justify-content: center;

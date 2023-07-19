@@ -11,6 +11,7 @@ function WorkItem(work: IWork) {
           className="Work-item-Cover"
           style={{ backgroundImage: `url(${work.cover})` }}
         ></div>
+
         <div className="Work-item-info-wrapper">
           <div className="Work-item-info">
             <div
@@ -20,13 +21,13 @@ function WorkItem(work: IWork) {
               <img src={getTitleIcon(work.titleIcon)} alt={work.titleIcon} />
             </div>
             <div className="Work-item-description">{work.description}</div>
-            <span>Visit:</span>
-            <div
-              className="Work-item-link"
+            <button
               onClick={() => goTo(work.link, true)}
+              className="Work-item-button"
             >
-              {work.link}
-            </div>
+              Visit
+            </button>
+
             <span>Tech Stacks include:</span>
             <div className="Work-item-skill">
               {work.skills.map((skill, index) => (

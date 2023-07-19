@@ -22,7 +22,7 @@ export class WorkData {
         link: "www.rcoimpex.com",
         skills: ["jquery", "laravel"],
         cover: rc_cover,
-        titleIconBgColor: "#fffdfdc4",
+        titleIconBgColor: "rgba(255, 255, 255)",
       },
     ];
   }
