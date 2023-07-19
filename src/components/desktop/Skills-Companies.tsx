@@ -12,14 +12,14 @@ import tryhackme from "../../assets/icons/skills/TryHackMe.png";
 import vue from "../../assets/icons/skills/Vue.png";
 import CV from "./CV";
 
-function SkillsCompanies() {
+function SkillsCompanies(cvProps: { showCV: boolean }) {
   return (
     <div className="Skills-Companies-wrapper" id="skills">
       <img src={triangle} className="Triangle" alt="triangle" />
       <div className="Skills">
         <div className="Title-wrapper">
           <span className="Title">Skills</span>
-          <CV position="absolute"></CV>
+          {cvProps.showCV && <CV position="absolute"></CV>}
         </div>
         <div className="Content-wrapper">
           <div className="Content">

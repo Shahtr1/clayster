@@ -38,3 +38,10 @@ $desktop-max-width: 128rem;
 $desktop-max-height: 70rem;
 
 $border-radius: 1.5rem;
+
+$mobile-menu-height: 8rem;
+$mobile-menu-bottom-spacing: 0.4rem;
+
+$mobile-max-height: calc(
+  100dvh - (#{$mobile-menu-height} + #{$mobile-menu-bottom-spacing})
+);

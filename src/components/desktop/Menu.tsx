@@ -5,8 +5,8 @@ import ellipse from "../../assets/icons/ellipse.png";
 
 function Menu(activeMenu: IMenu) {
   useEffect(() => {
-    const menuElement = document.getElementById("menus-wrapper") as HTMLElement;
-    menuElement?.classList.add("Animate");
+    const menuElement = document.getElementById("menu-wrapper") as HTMLElement;
+    menuElement.classList.add("Animate");
   });
 
   return (

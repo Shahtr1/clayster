@@ -1,7 +1,7 @@
 import React from "react";
 import { MenuData } from "../../data/menu.data";
 import { IMenu } from "../../data/model";
-import { getMenuIcon } from "../../common";
+import { getMenuIcon } from "../../Common";
 
 function MenuMb(activeMenu: IMenu) {
   return (
@@ -16,7 +16,7 @@ function MenuMb(activeMenu: IMenu) {
                 activeMenu.menu === menu.menu ? "#2a3654" : "transparent",
             }}
           >
-            <img src={getMenuIcon(menu.menu, activeMenu.menu)} alt="" />
+            <img src={getMenuIcon(menu.menu)} alt="" />
             <span>{menu.title}</span>
           </span>
         ))}

@@ -11,11 +11,8 @@ import vue from "./assets/icons/skills/Vue.png";
 import t360pay from "./assets/icons/works/t360 logo.png";
 import rc from "./assets/icons/works/RC.png";
 import { Links, Logos, MenuOpts, Skills } from "./data/model";
-import portfolio from "./assets/icons/menus/portfolio.png";
 import active_portfolio from "./assets/icons/menus/active_portfolio.png";
-import skills from "./assets/icons/menus/skills.png";
 import active_skills from "./assets/icons/menus/active_skills.png";
-import contact from "./assets/icons/menus/contact.png";
 import active_contact from "./assets/icons/menus/active_contact.png";
 
 export function goTo(link: Links | string, isUrl = false): string | void {
@@ -58,14 +55,14 @@ export function getTitleIcon(logo: Logos): string {
   }
 }
 
-export function getMenuIcon(menu: MenuOpts, activeMenu: MenuOpts): string {
+export function getMenuIcon(menu: MenuOpts): string {
   switch (menu) {
     case "works":
-      return activeMenu === "works" ? active_portfolio : portfolio;
+      return active_portfolio;
     case "skills":
-      return activeMenu === "skills" ? active_skills : skills;
+      return active_skills;
     default:
-      return activeMenu === "contact" ? active_contact : contact;
+      return active_contact;
   }
 }
 

@@ -7,8 +7,9 @@ import Socials from "./components/desktop/Socials";
 import Contact from "./components/desktop/Contact";
 import { MenuOpts } from "./data/model";
 import CV from "./components/desktop/CV";
-import { isInViewport } from "./common";
+import { isInViewport } from "./Common";
 import MenuMb from "./components/mobile/Menu-mb";
+import Portfolio from "./components/mobile/Portfolio";
 
 function App() {
   const [mobileView, setMobileView] = useState<boolean>(false);
@@ -90,7 +91,7 @@ function App() {
           {cvVisible && <CV position="fixed"></CV>}
           <Menu menu={activeMenu}></Menu>
           <Home></Home>
-          <SkillsCompanies></SkillsCompanies>
+          <SkillsCompanies showCV={!cvVisible}></SkillsCompanies>
           <Works></Works>
           <Socials></Socials>
           <Contact></Contact>
@@ -98,6 +99,7 @@ function App() {
       )}
       {mobileView && (
         <>
+          <Portfolio></Portfolio>
           <MenuMb menu={"works"}></MenuMb>
         </>
       )}

@@ -1,6 +1,6 @@
 import React from "react";
 import { IWork } from "../../../data/model";
-import { getSkillIcon, getTitleIcon, goTo } from "../../../common";
+import { getSkillIcon, getTitleIcon, goTo } from "../../../Common";
 
 function WorkItem(work: IWork) {
   return (
