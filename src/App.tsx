@@ -15,6 +15,7 @@ function App() {
   const [mobileView, setMobileView] = useState<boolean>(false);
 
   const [activeMenu, setActiveMenu] = useState<MenuOpts>("home");
+  const [activeMenuMb, setActiveMenuMb] = useState<MenuOpts>("works");
 
   const [cvVisible, setCvVisible] = useState<boolean>(false);
 
@@ -61,11 +62,13 @@ function App() {
   function getOnscroll(maxAllowedOffsetHeight: number) {
     const skills = document.getElementById("skills") as HTMLElement;
     return () => {
-      changeMenuState(skills, maxAllowedOffsetHeight);
+      if (!mobileView) {
+        changeMenuState(skills, maxAllowedOffsetHeight);
 
-      setCvVisible(skills?.getBoundingClientRect().y <= 0);
+        setCvVisible(skills?.getBoundingClientRect().y <= 0);
 
-      changeWorksState();
+        changeWorksState();
+      }
     };
   }
 
@@ -84,13 +87,17 @@ function App() {
     if (!mobileView) setupNavigation();
   });
 
+  function onMenuMbChange(activeMenu: MenuOpts) {
+    setActiveMenuMb(activeMenu);
+  }
+
   return (
     <div className="App">
       <Socials variant={mobileView ? "horizontal" : "vertical"}></Socials>
       {!mobileView && (
         <>
           {cvVisible && <CV position="fixed"></CV>}
-          <Menu menu={activeMenu}></Menu>
+          <Menu activeMenu={{ menu: activeMenu }}> </Menu>
           <Home></Home>
           <SkillsCompanies showCV={!cvVisible}></SkillsCompanies>
           <Works></Works>
@@ -99,8 +106,10 @@ function App() {
       )}
       {mobileView && (
         <>
-          <Portfolio></Portfolio>
-          <MenuMb menu={"works"}></MenuMb>
+          <Portfolio activeMenu={{ menu: activeMenuMb }}></Portfolio>
+          <MenuMb
+            activeMenuMb={{ menu: activeMenuMb, onMenuMbChange }}
+          ></MenuMb>
         </>
       )}
     </div>

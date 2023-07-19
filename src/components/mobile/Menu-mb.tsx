@@ -1,9 +1,9 @@
 import React from "react";
 import { MenuData } from "../../data/menu.data";
-import { IMenu } from "../../data/model";
 import { getMenuIcon } from "../../Common";
 
-function MenuMb(activeMenu: IMenu) {
+function MenuMb(props: any) {
+  console.log("props", props);
   return (
     <div className="Menu-mb-wrapper">
       <div className="Menu-mb">
@@ -11,9 +11,14 @@ function MenuMb(activeMenu: IMenu) {
           <span
             key={menu.menu}
             className="Menu-mb-item"
+            onClick={() => {
+              props.activeMenuMb.onMenuMbChange(menu.menu);
+            }}
             style={{
               borderTopColor:
-                activeMenu.menu === menu.menu ? "#2a3654" : "transparent",
+                props.activeMenuMb.menu === menu.menu
+                  ? "#2a3654"
+                  : "transparent",
             }}
           >
             <img src={getMenuIcon(menu.menu)} alt="" />

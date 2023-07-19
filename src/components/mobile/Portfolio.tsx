@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import WorksMb from "./Works-mb";
 import shahrukh from "../../assets/images/Shahrukh.png";
 
-function Portfolio() {
+function Portfolio(props: any) {
+  const { menu } = props.activeMenu;
   useEffect(() => {
     const aboutElement = document.getElementById("about-mb") as HTMLElement;
     aboutElement.classList.add("Animate");
@@ -34,7 +35,9 @@ function Portfolio() {
             </a>
           </div>
         </div>
-        <WorksMb></WorksMb>
+        {menu === "works" && <WorksMb></WorksMb>}
+        {menu === "skills" && "skills"}
+        {menu === "contact" && "contact"}
       </div>
     </div>
   );

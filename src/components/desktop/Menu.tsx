@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { MenuData } from "../../data/menu.data";
-import { IMenu } from "../../data/model";
 import ellipse from "../../assets/icons/ellipse.png";
 
-function Menu(activeMenu: IMenu) {
+function Menu(props: any) {
   useEffect(() => {
     const menuElement = document.getElementById("menu-wrapper") as HTMLElement;
     menuElement.classList.add("Animate");
@@ -17,7 +16,7 @@ function Menu(activeMenu: IMenu) {
             <a
               href={`#${menu.menu}`}
               className={`Menu-item ${
-                activeMenu.menu === menu.menu ? "Active" : ""
+                props.activeMenu.menu === menu.menu ? "Active" : ""
               }`}
             >
               {menu.title}
