@@ -5,7 +5,6 @@
   font-size: 1.7rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   & .Field-wrapper {
     display: flex;
     flex-direction: column;
@@ -29,7 +28,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: $dark-orange-var-2;
     cursor: pointer;
     position: relative;

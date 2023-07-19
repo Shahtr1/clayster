@@ -637,7 +637,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; }
+  justify-content: space-between;
+  gap: 2rem; }
   .Contact-mb-wrapper .Contact-mb-form-wrapper {
     background-color: #2a3654;
     color: white;
@@ -646,15 +647,14 @@
     align-items: center;
     position: relative;
     width: fit-content;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 1.5rem; }
 
 .Form-wrapper form {
   font-family: Inter-medium, sans-serif;
   font-size: 1.7rem;
   display: flex;
-  flex-direction: column;
-  gap: 2rem; }
+  flex-direction: column; }
   .Form-wrapper form .Field-wrapper {
     display: flex;
     flex-direction: column;
@@ -672,7 +672,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 17rem;
     background-color: #9e551f;
     cursor: pointer;
     position: relative; }

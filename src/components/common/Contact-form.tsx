@@ -59,7 +59,11 @@ function ContactForm(props: { variant: "desktop" | "mobile" }) {
     <>
       <ToastContainer />
       <div className="Form-wrapper">
-        <form ref={form} onSubmit={sendEmail}>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          style={{ gap: props.variant === "desktop" ? "2rem" : "1rem" }}
+        >
           <div className="Field-wrapper">
             {props.variant === "desktop" && <label>Your Name</label>}
             <input
