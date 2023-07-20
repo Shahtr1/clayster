@@ -12,11 +12,12 @@
     z-index: 999;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     height: 10rem;
     background: linear-gradient(0, #fff 0%, transparent 100%);
 
     & .Title {
+      border-radius: 500px;
       width: fit-content;
       display: flex;
       align-items: center;
@@ -24,8 +25,6 @@
       padding: 5px 3rem;
       color: white;
       font-family: Inter-regular, sans-serif;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
       background-color: $dark-blue;
       cursor: pointer;
       &:hover {
