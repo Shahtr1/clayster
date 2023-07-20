@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import WorksMb from "./Works-mb";
 import shahrukh from "../../assets/images/Shahrukh.png";
 import SkillsMb from "./Skills-mb";
@@ -12,11 +12,15 @@ function Portfolio(props: any) {
   });
 
   return (
-    <div className="Portfolio-mb-wrapper">
+    <div
+      className={`Portfolio-mb-wrapper ${
+        props.smallIntro ? "Small-intro" : ""
+      }`}
+    >
       <div className="Portfolio-mb">
         <div className="Intro-mb">
           <img height="250px" src={shahrukh} className="Shahrukh" alt="pic" />
-          <div className="Content-mb">
+          <div className="Content-mb" id="content-mb">
             <div className="About-mb" id="about-mb">
               <div>I build</div>
               <div>amazing</div>
@@ -37,9 +41,13 @@ function Portfolio(props: any) {
             </a>
           </div>
         </div>
-        {menu === "works" && <WorksMb></WorksMb>}
-        {menu === "skills" && <SkillsMb></SkillsMb>}
-        {menu === "contact" && <ContactMb></ContactMb>}
+        {menu === "works" && <WorksMb smallIntro={props.smallIntro}></WorksMb>}
+        {menu === "skills" && (
+          <SkillsMb smallIntro={props.smallIntro}></SkillsMb>
+        )}
+        {menu === "contact" && (
+          <ContactMb smallIntro={props.smallIntro}></ContactMb>
+        )}
       </div>
     </div>
   );

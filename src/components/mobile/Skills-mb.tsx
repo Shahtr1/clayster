@@ -11,11 +11,15 @@ import figma from "../../assets/icons/skills/Figma.png";
 import node from "../../assets/icons/skills/Node js.png";
 import vue from "../../assets/icons/skills/Vue.png";
 
-function SkillsMb() {
+function SkillsMb(props: { smallIntro: boolean }) {
   return (
     <div className="Skills-mb-wrapper">
       <div className="Skills-mb">
-        <Title title="My Skills" variant="small"></Title>
+        <Title
+          title="My Skills"
+          variant="small"
+          smallIntro={props.smallIntro}
+        ></Title>
         <div className="Skills-Content-mb">
           <span className="Skills-Content-mb-intro">
             I specialize in crafting robust and scalable web applications,

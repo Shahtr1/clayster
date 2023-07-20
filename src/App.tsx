@@ -19,6 +19,8 @@ function App() {
 
   const [cvVisible, setCvVisible] = useState<boolean>(false);
 
+  const [smallIntroScreen, setSmallIntroScreen] = useState<boolean>(false);
+
   function setupNavigation() {
     const windowInnerHeight = window.innerHeight;
     const maxAllowedOffsetHeight =
@@ -77,15 +79,25 @@ function App() {
   }
 
   useLayoutEffect(() => {
+    checkScreenResolution();
+    if (mobileView) {
+      checkIfIntroOverlapsSocials();
+    }
+
     window.onresize = () => {
       checkScreenResolution();
     };
-    checkScreenResolution();
   });
 
   useEffect(() => {
     if (!mobileView) setupNavigation();
   });
+
+  function checkIfIntroOverlapsSocials() {
+    const introContent = document.getElementById("content-mb") as HTMLElement;
+
+    if (introContent) setSmallIntroScreen(introContent.offsetTop < 32);
+  }
 
   function onMenuMbChange(activeMenu: MenuOpts) {
     setActiveMenuMb(activeMenu);
@@ -93,7 +105,10 @@ function App() {
 
   return (
     <div className="App">
-      <Socials variant={mobileView ? "horizontal" : "vertical"}></Socials>
+      <Socials
+        variant={mobileView ? "horizontal" : "vertical"}
+        smallIntro={smallIntroScreen}
+      ></Socials>
       {!mobileView && (
         <>
           {cvVisible && <CV position="fixed"></CV>}
@@ -106,7 +121,10 @@ function App() {
       )}
       {mobileView && (
         <>
-          <Portfolio activeMenu={{ menu: activeMenuMb }}></Portfolio>
+          <Portfolio
+            activeMenu={{ menu: activeMenuMb }}
+            smallIntro={smallIntroScreen}
+          ></Portfolio>
           <MenuMb
             activeMenuMb={{ menu: activeMenuMb, onMenuMbChange }}
           ></MenuMb>

@@ -45,4 +45,10 @@
     white-space: nowrap;
     color: $dark-blue;
   }
+
+  &.Small-intro {
+    & .Text {
+      font-size: 70%;
+    }
+  }
 }

@@ -27,10 +27,26 @@
     gap: 0.5rem;
   }
 
+  &.SmallIntro {
+    top: -2px;
+    left: -2px;
+    right: unset;
+    transform: unset;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: $border-radius;
+    background-color: $dark-blue-op95;
+  }
+
   &.Animate {
     &:not(.Mobile) {
       transition: right 0.7s ease-out;
-      right: 0;
+
+      &:not(.SmallIntro) {
+        right: 0;
+      }
     }
 
     &.Mobile {
@@ -42,5 +58,11 @@
   & > img {
     scale: 0.6;
     cursor: pointer;
+  }
+
+  &.SmallIntro {
+    & > img {
+      scale: 0.5;
+    }
   }
 }

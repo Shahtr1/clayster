@@ -1,8 +1,12 @@
 import React from "react";
 
-function Title(props: { title: string; variant: "small" | "large" }) {
+function Title(props: {
+  title: string;
+  variant: "small" | "large";
+  smallIntro?: boolean;
+}) {
   return (
-    <div className="Title-wrapper">
+    <div className={`Title-wrapper ${props.smallIntro ? "Small-intro" : ""}`}>
       <div className="Title-line-left Title-line">
         <div
           className="Horizontal"

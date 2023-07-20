@@ -359,15 +359,29 @@
     border-bottom-right-radius: 1.5rem;
     padding: 0.2rem 1rem;
     gap: 0.5rem; }
+  .Socials.SmallIntro {
+    top: -2px;
+    left: -2px;
+    right: unset;
+    transform: unset;
+    padding: 0.5rem 0;
+    gap: 0.5rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 1.5rem;
+    background-color: rgba(42, 54, 84, 0.95); }
   .Socials.Animate:not(.Mobile) {
-    transition: right 0.7s ease-out;
-    right: 0; }
+    transition: right 0.7s ease-out; }
+    .Socials.Animate:not(.Mobile):not(.SmallIntro) {
+      right: 0; }
   .Socials.Animate.Mobile {
     transition: top 0.7s ease-out;
     top: 0; }
   .Socials > img {
     scale: 0.6;
     cursor: pointer; }
+  .Socials.SmallIntro > img {
+    scale: 0.5; }
 
 .Contact-wrapper {
   width: 100%;
@@ -502,7 +516,7 @@
       .Portfolio-mb-wrapper .Intro-mb .Content-mb .About-mb {
         font-family: Roboto-regular, sans-serif;
         text-align: end;
-        font-size: 3.5rem;
+        font-size: 4.2vh;
         margin-right: -12rem; }
         .Portfolio-mb-wrapper .Intro-mb .Content-mb .About-mb.Animate {
           transition: margin-right 1s ease-out;
@@ -512,7 +526,7 @@
         padding-top: 1rem;
         font-family: League-Spartan-light, sans-serif;
         text-align: end;
-        font-size: 2.2rem; }
+        font-size: 2.7vh; }
         .Portfolio-mb-wrapper .Intro-mb .Content-mb .Name-mb > span span {
           font-family: League-Spartan-regular, sans-serif; }
       .Portfolio-mb-wrapper .Intro-mb .Content-mb .CV-mb {
@@ -526,6 +540,13 @@
         .Portfolio-mb-wrapper .Intro-mb .Content-mb .CV-mb:active {
           transition: background-color 0.5s ease-out;
           background-color: #2a3654; }
+  .Portfolio-mb-wrapper.Small-intro .Intro-mb .About-mb {
+    font-size: 3.2vh; }
+  .Portfolio-mb-wrapper.Small-intro .Intro-mb .Name-mb {
+    font-size: 2.5vh; }
+  .Portfolio-mb-wrapper.Small-intro .Intro-mb .CV-mb {
+    padding: 0.1rem 1rem;
+    font-size: 1.1rem; }
 
 .Works-mb-wrapper .Works-mb {
   font-family: Roboto-regular, sans-serif;
@@ -603,6 +624,8 @@
   .Title-wrapper .Text {
     white-space: nowrap;
     color: #2a3654; }
+  .Title-wrapper.Small-intro .Text {
+    font-size: 70%; }
 
 .Skills-mb-wrapper .Skills-mb {
   font-family: Roboto-regular, sans-serif;

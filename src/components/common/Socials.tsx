@@ -6,7 +6,10 @@ import twitter from "../../assets/icons/socials/twitter.png";
 import instagram from "../../assets/icons/socials/instagram.png";
 import { goTo } from "../../Common";
 
-function Socials(props: { variant: "horizontal" | "vertical" }) {
+function Socials(props: {
+  variant: "horizontal" | "vertical";
+  smallIntro: boolean;
+}) {
   useEffect(() => {
     const menuElement = document.getElementById("socials") as HTMLElement;
     menuElement.classList.add("Animate");
@@ -14,7 +17,9 @@ function Socials(props: { variant: "horizontal" | "vertical" }) {
 
   return (
     <div
-      className={`Socials ${props.variant === "horizontal" ? "Mobile" : ""}`}
+      className={`Socials ${
+        props.variant === "horizontal" && !props.smallIntro ? "Mobile" : ""
+      } ${props.smallIntro ? "SmallIntro" : ""}`}
       id="socials"
     >
       <img
