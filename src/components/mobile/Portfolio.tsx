@@ -11,6 +11,12 @@ function Portfolio(props: any) {
     aboutElement.classList.add("Animate");
   });
 
+  useEffect(() => {
+    if (menu === "blog") {
+      window.location.href = "https://blog.clayster.net/";
+    }
+  }, [menu]);
+
   return (
     <div
       className={`Portfolio-mb-wrapper ${
@@ -41,7 +47,9 @@ function Portfolio(props: any) {
             </a>
           </div>
         </div>
-        {menu === "works" && <WorksMb smallIntro={props.smallIntro}></WorksMb>}
+        {(menu === "works" || menu === "blog") && (
+          <WorksMb smallIntro={props.smallIntro}></WorksMb>
+        )}
         {menu === "skills" && (
           <SkillsMb smallIntro={props.smallIntro}></SkillsMb>
         )}

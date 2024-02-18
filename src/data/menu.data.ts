@@ -19,6 +19,11 @@ export class MenuData {
         menu: "contact",
         title: "Contact Me",
       },
+
+      {
+        menu: "blog",
+        title: "My Blog",
+      },
     ];
   }
   static get menusMb(): IMenu[] {
@@ -35,6 +40,10 @@ export class MenuData {
       {
         menu: "contact",
         title: "Contact Me",
+      },
+      {
+        menu: "blog",
+        title: "My Blog",
       },
     ];
   }

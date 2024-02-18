@@ -1,4 +1,4 @@
-export type MenuOpts = "home" | "skills" | "works" | "contact";
+export type MenuOpts = "home" | "skills" | "works" | "contact" | "blog";
 
 export interface IMenu {
   title?: string;

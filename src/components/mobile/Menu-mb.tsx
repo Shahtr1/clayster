@@ -20,7 +20,7 @@ function MenuMb(props: any) {
                   : "transparent",
             }}
           >
-            <img src={getMenuIcon(menu.menu)} alt="" />
+            <img src={getMenuIcon(menu.menu)} width="32" alt="" />
             <span>{menu.title}</span>
           </span>
         ))}

@@ -11,21 +11,33 @@ function Menu(props: any) {
   return (
     <div className="Menu-wrapper" id="menu-wrapper">
       <div className="Menu">
-        {MenuData.menus.map((menu, index) => (
-          <span key={index} className="Menu-item-wrapper">
-            <a
-              href={`#${menu.menu}`}
-              className={`Menu-item ${
-                props.activeMenu.menu === menu.menu ? "Active" : ""
-              }`}
-            >
-              {menu.title}
-            </a>
-            {index !== MenuData.menus.length - 1 && (
-              <img src={ellipse} alt="ellipse" />
-            )}
-          </span>
-        ))}
+        {MenuData.menus.map((menu, index) =>
+          menu.menu === "blog" ? (
+            <span key={index} className="Menu-item-wrapper">
+              <a
+                href={`https://blog.clayster.net`}
+                target="_blank"
+                className={`Menu-item`}
+              >
+                {menu.title}
+              </a>
+            </span>
+          ) : (
+            <span key={index} className="Menu-item-wrapper">
+              <a
+                href={`#${menu.menu}`}
+                className={`Menu-item ${
+                  props.activeMenu.menu === menu.menu ? "Active" : ""
+                }`}
+              >
+                {menu.title}
+              </a>
+              {index !== MenuData.menus.length - 1 && (
+                <img src={ellipse} alt="ellipse" />
+              )}
+            </span>
+          )
+        )}
       </div>
     </div>
   );

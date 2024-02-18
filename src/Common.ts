@@ -14,6 +14,7 @@ import { Links, Logos, MenuOpts, Skills } from "./data/model";
 import active_portfolio from "./assets/icons/menus/active_portfolio.png";
 import active_skills from "./assets/icons/menus/active_skills.png";
 import active_contact from "./assets/icons/menus/active_contact.png";
+import blog from "./assets/icons/menus/blog.png";
 
 export function goTo(link: Links | string, isUrl = false): string | void {
   let url = "";
@@ -61,6 +62,8 @@ export function getMenuIcon(menu: MenuOpts): string {
       return active_portfolio;
     case "skills":
       return active_skills;
+    case "blog":
+      return blog;
     default:
       return active_contact;
   }
